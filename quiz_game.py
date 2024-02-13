@@ -17,4 +17,4 @@ if question2 == answer2:
 if question3 == answer3:
     score += 1
 
-print('Your total score is'+ str(score) +'of 3')
+print(f'Your total score is {score} of 3')
