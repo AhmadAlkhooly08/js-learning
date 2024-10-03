@@ -119,3 +119,13 @@ const a = '2122';
 console.log(Number(a), a)
 console.log(Number('Ahmad'))
 console.log(String(123), 123)
+
+// type coercion :
+console.log('I am ' + 17 + ' years');
+console.log('I am ' + '17 ' + 'years');
+console.log('23' - '10' - 3, '23' + '10' + 3)
+console.log('10' * '3', '234' / '4')
+let n = '1' + 1;
+n -= 1;
+console.log(n)
+console.log(2 + 3 + 4 + '5', '10' - '4' - '3' - 2 + '5')
