@@ -97,8 +97,9 @@ is the \n\
 boos')
 console.log(`Ahmad
 is the
-boss`) 
+boss`)
 */
+/*
 const age = 16;
 if (age >= 18) {
                          console.log('you can start driving 🚗')
@@ -129,3 +130,58 @@ let n = '1' + 1;
 n -= 1;
 console.log(n)
 console.log(2 + 3 + 4 + '5', '10' - '4' - '3' - 2 + '5')
+*/
+/*
+// 5 falsy values : 0,'',undifeind,NAN,null. they will be false when we convert them to boolean 
+console.log(Boolean(undefined))
+console.log(Boolean(0))
+console.log(Boolean('ahmad'))
+console.log(Boolean(''))
+console.log(Boolean({}))
+const money = 1200;
+if (money <= 990) {
+                         console.log(`don't spent it invest it`)
+} else if (money !== 1000) {
+                         console.log('you much have 1000 thousend')
+} else {
+                         console.log(`you don't have any mony get an job`)
+}
+const favriot = Number(prompt('guess what is the 3 numbers between 1 & 20'));
+if (favriot === 7) {
+                         console.log(`oohh ${favriot} you guessed it`);
+} else if (favriot == 10) {
+                         console.log(`oohh ${favriot} you guessed it`);
+} else if (favriot == 16) {
+                         console.log(`oohh ${favriot} you guessed it`);
+} else {
+                         console.log(`you couldn't guess it it was 7,10,16`)
+}
+*/
+const lisens = false;
+const eyes = true;
+console.log(lisens && eyes) //false
+console.log(lisens || eyes)// true
+console.log(!lisens)//true 
+// if (lisens && eyes) {
+//                          console.log(' you can drive')
+// } else {
+//                          console.log('you can not drive')
+// }
+const tierd = false;
+if (lisens && eyes && !tierd) {
+                         console.log(' you can drive')
+} else {
+                         console.log('you can not drive')
+}
+
+const scoreDolphinst = 96 + 108 + 89;
+const scoreKoalas = 880 + 91 + 110;
+if (scoreDolphinst > scoreKoalas && scoreDolphinst >= 100) {
+                         console.log('Dolphins win the trophy')
+} else if (scoreKoalas > scoreDolphinst && scoreKoalas >= 100) {
+                         console.log('Koalas win the trophy')
+} else if (scoreDolphinst === scoreKoalas && scoreDolphinst >= 100 && scoreKoalas >= 100) {
+                         console.log('Both win the trophy')
+} else {
+                         console.log('no one wen the chalenge')
+}
