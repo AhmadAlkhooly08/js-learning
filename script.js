@@ -185,3 +185,34 @@ if (scoreDolphinst > scoreKoalas && scoreDolphinst >= 100) {
 } else {
                          console.log('no one wen the chalenge')
 }
+const day = 'Friday';
+switch (day) {
+                         case 'monday':
+                                                  console.log('coding');
+                                                  break;
+                         case 'tuesday':
+                         case 'wednesday':
+                                                  console.log('school')
+                                                  break;
+                         case 'thursday':
+                         case 'Friday':
+                                                  console.log('Quran');
+                                                  break;
+                         case 'saturday':
+                         case 'sunday':
+                                                  console.log('sport');
+                         default:
+                                                  console.log('there is no days selected')
+}
+if (day === 'monday') {
+                         console.log('coding');
+} else if (day === 'tuesday' || day === 'wednesday') {
+                         console.log('school');
+
+} else if (day === 'thursday' || day === 'Friday') {
+                         console.log('Quran');
+} else if (day === 'saturday' || day === 'sunday') {
+                         console.log('sport');
+} else {
+                         console.log('there is no days selected')
+}
