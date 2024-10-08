@@ -216,3 +216,12 @@ if (day === 'monday') {
 } else {
                          console.log('there is no days selected')
 }
+const relogine = 'muslim';
+(relogine === 'muslim') ? console.log('i love you') : console.log('you have to be muslim')
+let compair = relogine === 'muslim' ? 'i love you' : 'you have to be muslim';
+console.log(compair)
+console.log(`to go to jannah we have to be a real musilms ${(relogine === 'muslim') ? 'i love you' : 'you have to be muslim'}`);
+
+const bill = 400;
+const tip = bill <= 300 && bill >= 30 ? 15 / 100 * bill : 20 / 100 * bill;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`)
