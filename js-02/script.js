@@ -56,4 +56,18 @@ function fruitJuce2(apple, mango) {
   const juice = `our delicios juice is maked from ${applefruit} pices of apples and ${mangofruit} pices of mango   mangos`;
   return juice;
 }
-console.log(fruitJuce2(2, 3))
+console.log(fruitJuce2(2, 3));
+
+const retiermentmachine = function (birth) {
+  return 2024 - birth;
+}
+const calcretirment2 = function (birth, Name) {
+  const age = retiermentmachine(birth);
+  const retierment = 65 - age;
+  if (retierment > 0) {
+    return `${Name} has ${retierment} years to be retierde`;
+  } else {
+    return console.log(`${Name} has already retired`);
+  }
+}
+console.log(calcretirment2(1951, 'Ahmad'));
