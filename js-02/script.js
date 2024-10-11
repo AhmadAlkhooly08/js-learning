@@ -73,22 +73,36 @@ const calcretirment2 = function (birth, Name) {
 console.log(calcretirment2(1951, 'Ahmad'));
 
 
-const calcAverage = (score1, score2, score3) => {
-  return (score1 + score2 + score3) / 3;
-}
-const scoreDolphins = calcAverage(44, 23, 71);
-const scoreKoalas = calcAverage(65, 54, 49);
-const scoreDolphins2 = calcAverage(85, 54, 41);
-const scoreKoalas2 = calcAverage(23, 34, 27);
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
 
 const checkWinner = function (avgDolphins, avgKoalas) {
   if (avgDolphins >= 2 * avgKoalas) {
     return console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-  } if (avgKoalas >= 2 * avgDolphins) {
+  } else if (avgKoalas >= 2 * avgDolphins) {
     return console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
   } else {
     return console.log('No team wins...')
   }
 }
 checkWinner(scoreDolphins, scoreKoalas);
-checkWinner(scoreDolphins2, scoreKoalas2);
+scoreDolphins = calcAverage(85, 54, 41);
+scoreKoalas = calcAverage(23, 34, 27);
+checkWinner(scoreDolphins, scoreKoalas);
+
+//  Arrays 
+// const freind1 = 'musa';
+// const freind2 = 'isa';
+// const freind3 = 'osman';
+// with Array we can insted doing the top thing we can do it with one line with array
+const freinds = ['musa', 'isa', 'osman'];
+console.log(freinds)
+console.log(freinds[0])
+console.log(freinds[2])
+console.log(freinds.length) // .length show us th number of the values in the array and it does not start from 0
+console.log(freinds[freinds.length - 2])
+
+// we can do this to
+const years = new Array(1999, 1971, 2008, 1972);
+console.log(years)
