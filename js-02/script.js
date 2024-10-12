@@ -103,6 +103,31 @@ console.log(freinds[2])
 console.log(freinds.length) // .length show us th number of the values in the array and it does not start from 0
 console.log(freinds[freinds.length - 2])
 
+// in the const varibale we can cahange the elements inside it but in array we can cahnge one of the elements inside it but we can not change all of it
+freinds[1] = 'omar'
+console.log(freinds)
+// freinds = 'omar','gtd'; we can not do this
+
 // we can do this to
 const years = new Array(1999, 1971, 2008, 1972);
-console.log(years)
+console.log(years);
+
+const firstName = 'Ahmad';
+const about = [firstName, 'Alkhooly', 2024 - 2008, 'student', freinds];
+console.log(about)
+
+const cAge = function (birt) {
+  return 2024 - birt;
+}
+const yeas = [1970, 1971, 1998, 2008];
+// console.log(cAge(yeas)) we can not do this it will give us NAN
+
+
+const ag1 = cAge(yeas[0]);
+const ag2 = cAge(yeas[1]);
+const ag3 = cAge(yeas[yeas.length - 1]);
+console.log(ag1, ag2, ag3);
+
+// we can do this with arrays insted the top thing
+const all = [cAge(yeas[0]), cAge(yeas[1]), cAge(yeas[yeas.length - 1])];
+console.log(all)
