@@ -131,3 +131,45 @@ console.log(ag1, ag2, ag3);
 // we can do this with arrays insted the top thing
 const all = [cAge(yeas[0]), cAge(yeas[1]), cAge(yeas[yeas.length - 1])];
 console.log(all)
+
+const fr = ['musa', 'isa', 'mostafa'];
+fr.push('mohammed'); // add elements to end the Array
+console.log(fr);
+
+const frlengt = fr.push('mohammed');
+console.log(frlengt); // it will give us the Array length
+
+fr.unshift('Ahmad'); // add elements to the beginning
+console.log(fr)
+
+// remove elements
+fr.pop(); // remove from last
+console.log(fr)
+const proped = fr.pop(); // it will note show us the length it will show us the removed element
+console.log(proped)
+fr.shift(); // remove from beginnig
+console.log(fr)
+
+console.log(fr.indexOf('isa')); // it will give us the index number
+console.log(fr.indexOf('frfr')); // if we put an element that is not in the array it will give us -1
+fr.push(23)
+console.log(fr.includes('isa')); // it will say to us if the elment is in the array or not true or false
+console.log(fr.includes('bob')); //false
+console.log(fr.includes('23')); //it will give us false becuse it is like === if we remove the string it will be true
+
+if (fr.includes('isa')) {
+  console.log('you have a freind named isa ')
+}
+
+// code challenge
+
+const calcTip = function (tip) {
+  return tip >= 50 && tip <= 300 ? tip * 15 / 100 : tip * 20 / 100
+}
+
+const bills = [125, 155, 44];
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(tips);
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
+console.log(totals)
