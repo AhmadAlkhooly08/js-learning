@@ -211,3 +211,31 @@ Ahmad['from'] = 'egypt'
 console.log(Ahmad)
 
 console.log(`${Ahmad.firstName} has ${Ahmad.freinds.length} freinds and his best freind is ${Ahmad.freinds[1]}`);
+
+const Ahmad2 = {
+  firstName: 'Ahmad',
+  LastName: 'Alkhooly',
+  birth: 2008,
+  job: 'student',
+  freinds: freinds,
+  lisens: false,
+  cage: function () {
+    this.toplam = 2025 - this.birth;
+    return this.toplam;
+  },
+  driver: function () {
+    return `${this.firstName} is ${this.cage()} years old ${this.job} and he has ${this.lisens ? 'a' : 'no'} driver lisens`
+  }
+  /*
+cage: function (birth) {
+  return 2025 - birth;
+}
+*/
+  // cage: function () {
+  //   console.log(this)
+  //   return 2025 - this.birth;
+  // }
+
+};
+console.log(Ahmad2.cage());
+console.log(Ahmad2.driver())
