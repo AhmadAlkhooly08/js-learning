@@ -184,9 +184,30 @@ const AhmadArray = [
 ] // array it has to be ordered but object it does has to and it has key words insted 
 
 const Ahmad = {
-  Name: 'Ahmad',
+  firstName: 'Ahmad',
   LastName: 'Alkhooly',
-  age: '2025 - 2008',
+  age: 2025 - 2008,
   job: 'student',
   freinds: freinds
 }
+console.log(Ahmad)
+// calling data with .
+console.log(Ahmad.job);
+// console.log(Ahmad['job']); we can do these for calling
+const key = 'Name';
+console.log(Ahmad['first' + key]) // we can do these with [] not .
+console.log(Ahmad['Last' + key]);
+
+// const intrestedin = prompt('what do you know about Ahmad firstName,LastName,job,age,freinds');
+// if (Ahmad[intrestedin]) {
+//   console.log(Ahmad[intrestedin]);
+// } else {
+//   console.log('wrong request! chose between firstName,LastName,job,age,freinds')
+// }
+
+// adding data to object 
+Ahmad.location = 'turkey'
+Ahmad['from'] = 'egypt'
+console.log(Ahmad)
+
+console.log(`${Ahmad.firstName} has ${Ahmad.freinds.length} freinds and his best freind is ${Ahmad.freinds[1]}`);
