@@ -238,4 +238,33 @@ cage: function (birth) {
 
 };
 console.log(Ahmad2.cage());
-console.log(Ahmad2.driver())
+console.log(Ahmad2.driver());
+
+//  code challenge
+const mark = {
+  fullName: 'Mark Miller',
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  }
+};
+const john = {
+  fullName: 'John Smith',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  }
+}
+mark.calcBMI()
+john.calcBMI();
+
+if (mark.bmi > john.bmi) {
+  console.log(`Mark Miller's BMI (${mark.bmi}) is higher than John Smith's (${john.bmi})!`)
+} else {
+  console.log(`John Smith's BMI (${john.bmi}) is higher than Mark Miller's (${mark.bmi})!`)
+
+}
