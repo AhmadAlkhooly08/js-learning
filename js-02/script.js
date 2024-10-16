@@ -268,3 +268,40 @@ if (mark.bmi > john.bmi) {
   console.log(`John Smith's BMI (${john.bmi}) is higher than Mark Miller's (${mark.bmi})!`)
 
 }
+
+// For loop is keeping running while the condition is true
+for (let rep = 4; rep <= 7; rep++) {
+  console.log(`Lifting weights repetition ${rep} `)
+}
+const types = [];
+const About = [
+  'Ahmad',
+  'Alkhooly',
+  2024 - 2008,
+  'student'
+]
+
+for (let i = 0; i < About.length; i++) {
+  // Reading from About array
+  console.log(About[i], typeof About[i]);
+  // filling types Array
+  // types[i] = typeof About[i] first way
+  types.push(typeof About[i]); //the sekend way
+}
+console.log(types);
+
+const sene = [1956, 1971, 1972, 2008];
+for (let i = 0; i < sene.length; i++) {
+  console.log(2025 - sene[i]);
+}
+
+console.log('----only string----');
+for (let i = 0; i < About.length; i++) {
+  if (typeof About[i] !== 'string') continue;
+  // console.log(About[i], typeof About[i]);
+}
+console.log('----Break----');
+for (let i = 0; i < About.length; i++) {
+  if (typeof About[i] === 'number') break;
+  console.log(About[i], typeof About[i]);
+}
