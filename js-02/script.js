@@ -278,7 +278,8 @@ const About = [
   'Ahmad',
   'Alkhooly',
   2024 - 2008,
-  'student'
+  'student',
+  ['omar', 'hassan']
 ]
 
 for (let i = 0; i < About.length; i++) {
@@ -304,4 +305,21 @@ console.log('----Break----');
 for (let i = 0; i < About.length; i++) {
   if (typeof About[i] === 'number') break;
   console.log(About[i], typeof About[i]);
+}
+
+// backwards loop
+for (let i = About.length - 1; i >= 0; i--) {
+  console.log(i, About[i]);
+}
+
+// loops in loop
+for (let sport = 1; sport < 4; sport++) {
+  console.log(`----- exircice ${sport} ---`);
+
+  for (let rep = 1; rep < 2; rep++) {
+    console.log(`Exircise ${sport} : cardio ${rep}`);
+  }
+  for (let rep2 = 2; rep2 < 3; rep2++) {
+    console.log(`Exircise ${sport} : weights ${rep2}`)
+  }
 }
