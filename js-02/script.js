@@ -167,12 +167,12 @@ const calcTip = function (tip) {
   return tip >= 50 && tip <= 300 ? tip * 15 / 100 : tip * 20 / 100
 }
 
-const bills = [125, 155, 44];
+// const bills = [125, 155, 44];
 
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-console.log(tips);
-const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
-console.log(totals);
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// console.log(tips);
+// const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
+// console.log(totals);
 
 // object
 const AhmadArray = [
@@ -322,4 +322,33 @@ for (let sport = 1; sport < 4; sport++) {
   for (let rep2 = 2; rep2 < 3; rep2++) {
     console.log(`Exircise ${sport} : weights ${rep2}`)
   }
+}
+
+// While loop 
+// let you = 1;
+// while (you <= 3) {
+// console.log(`while you belive that you can do it you will do it ${you}`);
+// you++;
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`you got ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) {
+    console.log('loop has been finished')
+  }
+}
+
+// code challenge
+
+const calcTip2 = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tip = [];
+for (let i = 0; i <= bills.length; i++) {
+  const calculate = tip.push(calcTip(bills[i]));
+  console.log(calculate);
 }
