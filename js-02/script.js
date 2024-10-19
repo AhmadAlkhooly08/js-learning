@@ -73,9 +73,9 @@ const calcretirment2 = function (birth, Name) {
 console.log(calcretirment2(1951, 'Ahmad'));
 
 
-const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
-let scoreDolphins = calcAverage(44, 23, 71);
-let scoreKoalas = calcAverage(65, 54, 49);
+// const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+// let scoreDolphins = calcAverage(44, 23, 71);
+// let scoreKoalas = calcAverage(65, 54, 49);
 
 const checkWinner = function (avgDolphins, avgKoalas) {
   if (avgDolphins >= 2 * avgKoalas) {
@@ -86,10 +86,10 @@ const checkWinner = function (avgDolphins, avgKoalas) {
     return console.log('No team wins...')
   }
 }
-checkWinner(scoreDolphins, scoreKoalas);
-scoreDolphins = calcAverage(85, 54, 41);
-scoreKoalas = calcAverage(23, 34, 27);
-checkWinner(scoreDolphins, scoreKoalas);
+// checkWinner(scoreDolphins, scoreKoalas);
+// scoreDolphins = calcAverage(85, 54, 41);
+// scoreKoalas = calcAverage(23, 34, 27);
+// checkWinner(scoreDolphins, scoreKoalas);
 
 //  Arrays 
 // const freind1 = 'musa';
@@ -348,7 +348,22 @@ const calcTip2 = function (bill) {
 };
 let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 let tip = [];
-for (let i = 0; i <= bills.length; i++) {
-  const calculate = tip.push(calcTip(bills[i]));
-  console.log(calculate);
+let total = [];
+for (let i = 0; i < bills.length - 1; i++) {
+  const tips = (calcTip2(bills[i]));
+  tip.push(tips)
+  total.push(bills[i] + tips);
+  console.log(tips, total[i]);
 }
+
+const calcAverage = function (sum, count) {
+  return sum / count;
+}
+let sum = 0;
+let count = [0];
+for (let i = 1; i <= 7; i++) {
+  count.push(i)
+  sum += i;
+}
+const avrge = calcAverage(sum, count.length)
+console.log(`the total numbers are ${count} and the sum of it is ${sum} and the avrege is ${avrge} `)
