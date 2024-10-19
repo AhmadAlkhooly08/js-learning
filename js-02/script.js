@@ -367,3 +367,13 @@ for (let i = 1; i <= 7; i++) {
 }
 const avrge = calcAverage(sum, count.length)
 console.log(`the total numbers are ${count} and the sum of it is ${sum} and the avrege is ${avrge} `)
+
+// we can do this to
+const rr = function (arr) {
+  const sum = 0;
+  for (let i = 1; i <= arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+}
+console.log(rr(2, 5, 8, 3, 6, 10))
