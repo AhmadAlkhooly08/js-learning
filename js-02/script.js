@@ -376,4 +376,23 @@ const rr = function (arr) {
   }
   return sum / arr.length;
 }
-console.log(rr(2, 5, 8, 3, 6, 10))
+// console.log(rr(2, 5, 8, 3, 6, 10))
+
+let nums = [1, 1, 1, 1]
+// for (let i = 0; i < nums.length; i++) {
+//   for (let j = nums.length - 1; j >= 0; j--) {
+//     if (nums[i] == nums[j] && i < j) {
+//       return i, j;
+//     }
+//   }
+// }
+var numIdenticalPairs = function (nums) {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = 0; j < nums.length; j++) {
+      if (nums[i] == nums[j] && i < j) {
+        return 4 * (4 - 1) / 2;
+      }
+    }
+  };
+}
+console.log(numIdenticalPairs(nums))  
