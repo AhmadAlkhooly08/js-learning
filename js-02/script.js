@@ -390,3 +390,15 @@ var numIdenticalPairs = function (nums) {
   }
 };
 console.log(numIdenticalPairs(nums));
+
+let ad = ['codewars', 'flick', 'code', 'wars'];
+const ary = function () {
+  for (let i = 0; i < ad.length; i++) {
+    let flag = ad[i] == true;
+    if (ad[i] === 'flick') {
+      flag = ad[i] = false;
+    }
+    console.log(ad[i]);
+  }
+};
+ary();
