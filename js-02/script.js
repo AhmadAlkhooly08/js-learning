@@ -391,14 +391,14 @@ var numIdenticalPairs = function (nums) {
 };
 console.log(numIdenticalPairs(nums));
 
-let ad = ['codewars', 'flick', 'code', 'wars'];
+let ad = ['codewars', 'code', 'flick', 'wars'];
 const ary = function () {
+  let flag = true;
   for (let i = 0; i < ad.length; i++) {
-    let flag = ad[i] == true;
-    if (ad[i] === 'flick') {
-      flag = ad[i] = false;
+    if (ad[i] == 'flick') {
+      flag = false;
     }
-    console.log(ad[i]);
+    console.log(ad[i], flag);
   }
 };
 ary();
