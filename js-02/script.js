@@ -402,3 +402,20 @@ const ary = function () {
   }
 };
 ary();
+
+const temper = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+// loking for the max & min value
+const clactemple = function (atm) {
+  let max = atm[0];
+  let min = atm[0];
+  for (let i = 0; i < atm.length; i++) {
+    const GG = atm[i];
+    if (typeof GG !== 'number') continue;
+    if (GG > max) max = GG;
+    else if (GG < min) min = GG;
+  }
+  console.log(max, min);
+  return max - min;
+};
+const ds = clactemple(temper);
+console.log(ds);
