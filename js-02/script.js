@@ -436,3 +436,16 @@ const clactempleN = function (atm, as) {
 };
 const ds2 = clactempleN([98, 55, 3, 4, 2], [33, 90, 2]);
 console.log(ds2);
+
+const numss = [3, 2, 4];
+const target = 6;
+const twoSum = function (nums, targe) {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] == targe) {
+        return [i, j];
+      }
+    }
+  }
+};
+console.log(twoSum(numss, target));
