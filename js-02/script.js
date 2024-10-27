@@ -405,7 +405,7 @@ ary();
 
 const temper = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 // loking for the max & min value
-const clactemple = function (atm) {
+const clactemple = function (atm, as) {
   let max = atm[0];
   let min = atm[0];
   for (let i = 0; i < atm.length; i++) {
@@ -419,3 +419,20 @@ const clactemple = function (atm) {
 };
 const ds = clactemple(temper);
 console.log(ds);
+
+// doing it with 2 Arrays
+const clactempleN = function (atm, as) {
+  let max = atm[0];
+  let min = atm[0];
+  const GG = atm.concat(as);
+  console.log(GG);
+  for (let i = 0; i < GG.length; i++) {
+    if (typeof GG[i] !== 'number') continue;
+    if (GG[i] > max) max = GG[i];
+    else if (GG[i] < min) min = GG[i];
+  }
+  console.log(max, min);
+  return max - min;
+};
+const ds2 = clactempleN([98, 55, 3, 4, 2], [33, 90, 2]);
+console.log(ds2);
