@@ -449,3 +449,41 @@ const twoSum = function (nums, targe) {
   }
 };
 console.log(twoSum(numss, target));
+
+// solving bugs
+// A)IDENTIFY THE BUG
+// B)FIND THE BUG
+// C)FIX THE BUG
+const mecer = function () {
+  const val = {
+    type: 'temp',
+    unit: 'celsius',
+    // value: Number(prompt('how much is the degrees celsius')),
+  };
+  console.log(val);
+  console.log(val.value);
+  // console.table(val); //nice for object
+  // console.warn(val.value);
+  // console.error(val.value);
+  return val.value + 278;
+};
+console.log(mecer());
+
+// Bigger bug\
+
+const clactempleBug = function (atm, as) {
+  let max = 0;
+  let min = 0;
+  const GG = atm.concat(as);
+  console.log(GG);
+  for (let i = 0; i < GG.length; i++) {
+    if (typeof GG[i] !== 'number') continue;
+    // debugger;
+    if (GG[i] > max) max = GG[i];
+    else if (GG[i] < min) min = GG[i];
+  }
+  console.log(max, min);
+  return max - min;
+};
+const dsB = clactempleBug([98, 55, 3, 4, 2], [33, 90, 2]);
+console.log(dsB);
