@@ -487,3 +487,15 @@ const clactempleBug = function (atm, as) {
 };
 const dsB = clactempleBug([98, 55, 3, 4, 2], [33, 90, 2]);
 console.log(dsB);
+
+const nnuum = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+var removeDuplicates = function (nums) {
+  let k = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== nums[i + 1]) {
+      k.push(nums[i]);
+    }
+  }
+  return k;
+};
+console.log(removeDuplicates(nnuum));
