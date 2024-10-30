@@ -499,3 +499,14 @@ var removeDuplicates = function (nums) {
   return k;
 };
 console.log(removeDuplicates(nnuum));
+
+const ar = [17, 23, 4];
+const printFor = function (arr) {
+  let forecast = '';
+  for (let i = 0; i < arr.length; i++) {
+    forecast +=
+      `${arr[i]}C in ${i + 1} days` + (i < arr.length - 1 ? '...' : '');
+  }
+  return forecast;
+};
+console.log(printFor(ar));
