@@ -510,3 +510,31 @@ const printFor = function (arr) {
   return forecast;
 };
 console.log(printFor(ar));
+
+// leet code
+const leet = [3, 2, 2, 3, 9, 7, 5, 3, 3];
+const va = 3;
+
+var removeElement = function (nums, val) {
+  let k = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== val) {
+      k.push(nums[i]);
+    }
+  }
+  return k;
+};
+
+console.log(removeElement(leet, va));
+// var removeElement = function (nums, val) {
+//   let k = 0; // Pointer to place elements that aren't equal to val
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] !== val) {
+//       nums[k] = nums[i];
+//       k++;
+//     }
+//   }
+//   return k; // k represents the count of elements that are not 'val'
+// };
+
+// console.log(removeElement(leet, va)); // Outputs the number of elements that are not '3'
