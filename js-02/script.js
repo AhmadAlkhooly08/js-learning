@@ -542,24 +542,17 @@ console.log(removeElement(leet, va));
 // leet code
 
 const n = [1, 3, 5, 6];
-const ter = 7;
+const ter = 2;
 
 var searchInsert = function (nums, target) {
-  let k = 0;
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] == target) {
       return i;
     }
-  }
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = i + 1; j < nums.length; j++) {
-      if (
-        (nums[i] < target && nums[j] > target) ||
-        (nums[i] > target && nums[j] < target)
-      ) {
-        return nums[i].idexOf(target);
-      }
+    if (nums[i] > target) {
+      return i;
     }
   }
+  return nums.length;
 };
 console.log(searchInsert(n, ter));
