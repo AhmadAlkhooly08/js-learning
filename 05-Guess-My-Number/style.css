@@ -42,12 +42,12 @@ main {
 
 .right {
   width: 52rem;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 /* ELEMENTS STYLE */
 h1 {
-  font-size: 4rem;
+  font-size: 6rem;
   text-align: center;
   position: absolute;
   width: 100%;
