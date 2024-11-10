@@ -19,3 +19,6 @@ for(let i = 0; i < btnsopen.length; i++){
     btnclose.addEventListener('click',close)   
     overlay.addEventListener('click',close)   
 }
+document.addEventListener('keydown',function(e){
+    console.log(e.key);
+})
