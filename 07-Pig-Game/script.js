@@ -67,3 +67,19 @@ btnHold.addEventListener("click", function () {
     }
   }
 })
+btnNew.addEventListener('click',function(){
+    scores[0] = 0;
+    scores[1] = 0;
+    activePlayer = activePlayer === 0 ? 1 : 0;
+    currentScore = 0;
+    playing = true;
+    score0.textContent = 0;
+    score1.textContent = 0;
+    current0.textContent = 0;
+    current1.textContent = 0;
+    player0.classList.remove('player--winner')
+    player1.classList.remove('player--winner')
+    player0.classList.toggle('player--active');
+    player1.classList.toggle('player--active');
+    diceEl.classList.add('hidden');
+})
