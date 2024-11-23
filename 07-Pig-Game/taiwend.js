@@ -38,7 +38,7 @@ btnHold.addEventListener('click',function(){
     document.querySelector(`.score-${activePlayer}`).textContent = scores[activePlayer];    
     if(scores[activePlayer] >= 20){
         document.querySelector(`.score-${activePlayer}`).textContent = 'Winner 🎉';     
-        document.querySelector(`.score-${activePlayer}`).classList.add('player--winner')
+        document.querySelector(`.player-${activePlayer}`).classList.add('player--winner')
         btnRoll.disabled = true;
         btnHold.disabled = true;
         currentScore = 0;
@@ -53,8 +53,13 @@ btnNew.addEventListener('click',function(){
     scores[1] = 0;
     btnRoll.disabled = false;
     btnHold.disabled = false;
-    document.querySelector(`.score-${activePlayer}`).textContent = 0;  
-    document.querySelector(`.score-${activePlayer}`).classList.remove('player--winner')
+    score0.textContent = 0;
+    score1.textContent = 0;
+    current0.textContent = 0;
+    current1.textContent = 0;
+    player0.classList.add('player-active')
+    player1.classList.remove('player-active')
+    player0.classList.remove('player--winner')
+    player1.classList.remove('player--winner')
    diceEl.classList.add('hidden')
-   activePlayer = 1
 })
