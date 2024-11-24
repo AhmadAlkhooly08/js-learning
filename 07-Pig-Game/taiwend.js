@@ -51,6 +51,7 @@ btnNew.addEventListener('click',function(){
     currentScore = 0;
     scores[0] = 0;
     scores[1] = 0;
+    activePlayer = 0;
     btnRoll.disabled = false;
     btnHold.disabled = false;
     score0.textContent = 0;
