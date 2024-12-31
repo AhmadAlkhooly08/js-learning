@@ -55,20 +55,82 @@ console.log(sortedArrayToBST(nums));
 
 // working with scope 
 
-function calcAge(birthyear){
-    const age = 2025 - birthyear;
-    function print(){
-        const output = `Hi ${Name}, You are ${age}, Born in ${birthyear}`;
-        console.log(output);
-        if(birthyear >= 2000 && birthyear <= 2010){
-            const str = `oh and you are millenial ${Name}`;
-            console.log(str);
-        }
-    }
-    print();
-    console.log(Name); 
-    console.log(age);
-}
+// function calcAge(birthyear){
+//     const age = 2025 - birthyear;
+//     function print(){
+//         let output = `Hi ${n}, You are ${age}, Born in ${birthyear}`;
+//         console.log(output);
+//         if(birthyear >= 2000 && birthyear <= 2010){
+//             const Name = 'Alkholy';
+//             var st ='how are you';
+//             const str = `oh and you are millenial ${Name}`;
+//             console.log(str);
+//             function add(a,b){
+//                 return a+b;
+//             }
+//             output = 'New';
+//             console.log(output);
+//         }
+//         // console.log(str); will not be defind
+//         console.log(st);
+//         // console.log(add(2,3));
+//     }
+//     print();
+//     console.log(Name); 
+//     console.log(age);
+// }
 
-const Name = 'Ahmad';
-calcAge(2008)
+// const Name = 'Ahmad';
+// calcAge(2008)
+// Finished scope
+
+// edabit Test
+
+const arr = [1.346, 1.6532, 1.8734, 1.8723];
+const minMax = function (arr){
+    let min =arr[0];
+    let max =arr[0];
+    for(let i=0; i<arr.length; i++){
+        if(arr[i] < min){
+            min = arr[i]
+        }
+        if(arr[i] > max){
+            max = arr[i]
+        }
+
+    }
+    console.log(min,max);
+}
+minMax(arr);
+
+
+
+// Hoisting and TDZ in Practice
+
+// variabels
+console.log(nam);
+// console.log(job);
+// console.log(age);
+
+var nam = 'Ahmad';
+let job = 'programmer';
+const age = 17;
+
+// Functions
+
+console.log(dec(2,3));
+console.log(exp(6,5));
+console.log(arrow(3,4));
+function dec (a,b){
+    return a+b;
+}
+const exp= function (a,b){
+    return a+b;
+}
+var arrow = (a,b) => a+b;
+
+if(!shopping) delet();
+var shopping = 10;
+function delet (){
+    console.log('All products is deleted');
+} 
