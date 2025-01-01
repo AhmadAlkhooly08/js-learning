@@ -108,7 +108,7 @@ minMax(arr);
 // Hoisting and TDZ in Practice
 
 // variabels
-console.log(nam);
+// console.log(nam);
 // console.log(job);
 // console.log(age);
 
@@ -118,19 +118,53 @@ const age = 17;
 
 // Functions
 
-console.log(dec(2,3));
-console.log(exp(6,5));
-console.log(arrow(3,4));
-function dec (a,b){
-    return a+b;
-}
-const exp= function (a,b){
-    return a+b;
-}
-var arrow = (a,b) => a+b;
+// console.log(dec(2,3));
+// console.log(exp(6,5));
+// console.log(arrow(3,4));
+// function dec (a,b){
+//     return a+b;
+// }
+// const exp= function (a,b){
+//     return a+b;
+// }
+// var arrow = (a,b) => a+b;
 
 if(!shopping) delet();
 var shopping = 10;
 function delet (){
     console.log('All products is deleted');
 } 
+
+// working with this keyword
+
+console.log(this);
+const calcAge = function(birthYear){
+    console.log(2025 - birthYear);
+    console.log(this);
+}
+calcAge(2008)
+const calcAgeArrow = birthYear =>{
+    console.log(2025 - birthYear);
+    console.log(this);
+}
+calcAgeArrow(2010)
+
+const Ahmad ={
+    year:2008,
+    calcAge:function(){
+        console.log(this);
+        console.log(2025 - this.year);
+    }
+}
+Ahmad.calcAge();
+
+const mat = {
+    year:1989,
+}
+
+mat.calcAge = Ahmad.calcAge // Method bawroling // And without calling the function
+mat.calcAge()
+
+const f = Ahmad.calcAge;
+f()
+// This keyword Always points to the object that is calling the method
