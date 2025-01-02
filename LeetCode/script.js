@@ -148,16 +148,18 @@ const calcAgeArrow = birthYear =>{
     console.log(this);
 }
 calcAgeArrow(2010)
-
+var firstName = 'ismail' // The VAR method is included in the window so it will be found By Arrow Function
 const Ahmad ={
+    firstName:'Ahmad',
     year:2008,
     calcAge:function(){
         console.log(this);
         console.log(2025 - this.year);
-    }
+    },
+    scope: () => console.log(`hy ${this.firstName}`)
 }
 Ahmad.calcAge();
-
+Ahmad.scope();
 const mat = {
     year:1989,
 }
@@ -166,5 +168,5 @@ mat.calcAge = Ahmad.calcAge // Method bawroling // And without calling the funct
 mat.calcAge()
 
 const f = Ahmad.calcAge;
-f()
+f( )
 // This keyword Always points to the object that is calling the method
