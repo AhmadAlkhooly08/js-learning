@@ -149,24 +149,94 @@ const calcAgeArrow = birthYear =>{
 }
 calcAgeArrow(2010)
 var firstName = 'ismail' // The VAR method is included in the window so it will be found By Arrow Function
-const Ahmad ={
-    firstName:'Ahmad',
-    year:2008,
-    calcAge:function(){
-        console.log(this);
-        console.log(2025 - this.year);
-    },
-    scope: () => console.log(`hy ${this.firstName}`)
-}
-Ahmad.calcAge();
-Ahmad.scope();
-const mat = {
-    year:1989,
-}
+// const Ahmad ={
+//     firstName:'Ahmad',
+//     year:1987,
+//     calcAge:function(){
+//         console.log(this);
+//         console.log(2025 - this.year);
+        
+//         // solution 1
+//         const self = this; // we can solve it like this now it bee defind it is called with self or that
+//         const millenial = function(){
+//             console.log(self.year >= 1981 && self.year <= 2000);
+//             // console.log(this.year >= 1981 && this.year <= 2000); //it will be undeifeind excaktly like if we use the THIS keyword in the global scope !!!but we can solve it follow in top
+//         }
+//         millenial();
 
-mat.calcAge = Ahmad.calcAge // Method bawroling // And without calling the function
-mat.calcAge()
+//         // solution 2
+//         const isMillenial = ()=>{
+//             console.log(this.year >= 1981 && this.year <= 2000); // this solution is best because THIS keyword in the arrow function is loking to the parent and its parent calcAge so this will be the object  
+//         }  
+//         isMillenial();  
+//     },
+//     scope: () => console.log(`hy ${this.firstName}`)
+// }
+// Ahmad.calcAge();
+// Ahmad.scope();
+// const mat = {
+//     year:1989,
+// }
 
-const f = Ahmad.calcAge;
-f( )
+// mat.calcAge = Ahmad.calcAge // Method bawroling // And without calling the function
+// mat.calcAge()
+
+// const f = Ahmad.calcAge;
+// f( )
 // This keyword Always points to the object that is calling the method
+
+
+// arguments keyword
+
+const expr = function(a,b){
+    console.log(arguments);
+    console.log(a+b);
+}
+expr(3,5)
+
+// var arro = (a,b) =>{
+//     console.log(arguments);
+//     return a + b ;
+// }
+// arro(7,4)
+
+// Object refrense in practice
+
+const john1 ={
+    firstName:'John',
+    lastName:'Alkhooly',
+    age:30
+}
+const ne = john1;
+ne.firstName = 'Ahmad'
+console.log(john1);
+console.log(john1);
+// const beMuslim= function(Name,newname){
+//     Name.firstName = newname;
+//     console.log(Name);
+// }
+// beMuslim(john1,'Ahmad')
+
+const john ={
+    firstName:'John',
+    lastName:'Alkhooly',
+    age:30,
+    family:['Ahmad','isa']
+}
+
+const johncopy={...john} // But this will not copy all the object if there is a nested object it will not copy it like the array is atype of a object so if we want to change anything from the array it will be changed in 2 objects
+
+johncopy.firstName='Ahmad';
+
+johncopy.family.push('musa')
+
+console.log('befor:',john);
+console.log('after:',johncopy); 
+
+// But we can solve it wit deep clone 
+const johnClone = structuredClone(john);// with this know we can solve the problem
+
+johnClone.family.push('muhammed')
+
+console.log('original:',john);
+console.log('deep clone:',johnClone); 
