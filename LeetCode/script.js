@@ -36,21 +36,21 @@
 // merge(nums1,3,nums2,3)
 
 // Convert Sorted Array to Binary Search Tree
-let nums = [-10, -3,0, 5, 9];
-var sortedArrayToBST = function (nums) {
-    let midKeyIndex = Math.floor(nums.length / 2);
-    console.log(midKeyIndex);
-    let middle = nums.splice(midKeyIndex,1)[0];
-    nums.unshift(middle);
-    if(nums[0] > nums){
-       middle = nums.splice(midKeyIndex,1)[0];
-       nums.unshift(middle); 
+// let nums = [-10, -3,0, 5, 9];
+// var sortedArrayToBST = function (nums) {
+//     let midKeyIndex = Math.floor(nums.length / 2);
+//     console.log(midKeyIndex);
+//     let middle = nums.splice(midKeyIndex,1)[0];
+//     nums.unshift(middle);
+//     if(nums[0] > nums){
+//        middle = nums.splice(midKeyIndex,1)[0];
+//        nums.unshift(middle); 
 
-    }
-    console.log(nums);
-    for (let i = 0; i < nums.length; i++) {}
-};
-console.log(sortedArrayToBST(nums));
+//     }
+//     console.log(nums);
+//     for (let i = 0; i < nums.length; i++) {}
+// };
+// console.log(sortedArrayToBST(nums));
 
 
 // working with scope 
@@ -86,22 +86,22 @@ console.log(sortedArrayToBST(nums));
 
 // edabit Test
 
-const arr = [1.346, 1.6532, 1.8734, 1.8723];
-const minMax = function (arr){
-    let min =arr[0];
-    let max =arr[0];
-    for(let i=0; i<arr.length; i++){
-        if(arr[i] < min){
-            min = arr[i]
-        }
-        if(arr[i] > max){
-            max = arr[i]
-        }
+// const arr = [1.346, 1.6532, 1.8734, 1.8723];
+// const minMax = function (arr){
+//     let min =arr[0];
+//     let max =arr[0];
+//     for(let i=0; i<arr.length; i++){
+//         if(arr[i] < min){
+//             min = arr[i]
+//         }
+//         if(arr[i] > max){
+//             max = arr[i]
+//         }
 
-    }
-    console.log(min,max);
-}
-minMax(arr);
+//     }
+//     console.log(min,max);
+// }
+// minMax(arr);
 
 
 
@@ -129,26 +129,26 @@ const age = 17;
 // }
 // var arrow = (a,b) => a+b;
 
-if(!shopping) delet();
-var shopping = 10;
-function delet (){
-    console.log('All products is deleted');
-} 
+// if(!shopping) delet();
+// var shopping = 10;
+// function delet (){
+//     console.log('All products is deleted');
+// } 
 
-// working with this keyword
+// // working with this keyword
 
-console.log(this);
-const calcAge = function(birthYear){
-    console.log(2025 - birthYear);
-    console.log(this);
-}
-calcAge(2008)
-const calcAgeArrow = birthYear =>{
-    console.log(2025 - birthYear);
-    console.log(this);
-}
-calcAgeArrow(2010)
-var firstName = 'ismail' // The VAR method is included in the window so it will be found By Arrow Function
+// console.log(this);
+// const calcAge = function(birthYear){
+//     console.log(2025 - birthYear);
+//     console.log(this);
+// }
+// calcAge(2008)
+// const calcAgeArrow = birthYear =>{
+//     console.log(2025 - birthYear);
+//     console.log(this);
+// }
+// calcAgeArrow(2010)
+// var firstName = 'ismail' // The VAR method is included in the window so it will be found By Arrow Function
 // const Ahmad ={
 //     firstName:'Ahmad',
 //     year:1987,
@@ -240,3 +240,60 @@ johnClone.family.push('muhammed')
 
 console.log('original:',john);
 console.log('deep clone:',johnClone); 
+
+// Destructuring Arrays
+
+const arr = [3,7,9];
+const a = arr[0];
+const b = arr[1];
+const c = arr[2];
+// insted of doing this we can do it more simple 👉
+
+const [x,y,z] = arr;
+
+console.log(x, y, z);
+
+const resturant ={
+    name: 'classico italyano',
+    categories:['italyen','organic','margaretta','with meat'],
+    startermenu:['bread','tea','Ayran','egg'],
+    mainMenu:['pizza','pasta','breakfest'],
+    order: function(starterindex,mainindex){
+        return[this.startermenu[starterindex],this.mainMenu[mainindex]]
+    }
+}
+
+let [first,second] = resturant.categories;
+const [secod, , third] = resturant.startermenu;
+console.log(first,second);
+console.log(secod,third);
+// now if we want to change 2 elements place we can do it with 2 ways normally & Destructuring
+
+// normally
+// const temp = first;
+// first = second;
+// second = temp;
+// console.log(first,second);
+
+// Destructuring
+[first,second] = [second,first]
+console.log(first,second);
+
+// Recieve 2 return values from a function
+const [order1,order2] = resturant.order(2,0);
+console.log(order1,order2);
+
+// what if we have a nested array
+
+const nested = [2,4,[5,1]]
+
+// const [f, , j] = nested;
+// console.log(f,j);
+
+const [i, ,[j,d]] = nested;
+console.log(i,j,d);
+
+// Default values
+// const [A,B,C]= [8,9];
+const [A=1,B=1,C=1]= [9];
+console.log(A,B,C); // now c will be undefiend but if we make A,B,C = 1 c will be 1 and if we remove B from the array it will be 1 also 
