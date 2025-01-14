@@ -326,6 +326,10 @@ const resturant2 ={
     },
     pasta:function(ing1,ing2,ing3){
         console.log(`Here is your deliciose 😋 pasta with ${ing1} , ${ing2} and ${ing3}`);
+    },
+    orderpizza: function(mainIng,...others){
+        console.log(mainIng);
+        console.log(...others);
     }
 }
 // resturant2.orderdelivery({
@@ -404,9 +408,46 @@ console.log(letter);
 // resturant2.pasta(...ingredients);
 
 //spread operator with objects
-const newObj = {foundIn:1980,...resturant2,founder:'Ahmad Alkhooly'}
-console.log(newObj);
+//const newObj = {foundIn:1980,...resturant2,founder:'Ahmad Alkhooly'}
+// console.log(newObj);
 
-const copy = {...resturant2}
-copy.name = 'Alkhooly';
-console.log(copy.name , resturant2.name); 
+// const copy = {...resturant2}
+// copy.name = 'Alkhooly';
+// console.log(copy.name , resturant2.name); 
+
+// Rest operator
+// Rest operator is opisite of spread spread operator unpacks array but Rest operator packs elements into the array
+
+// 1)Destructuring
+// Spread: because on the Right side of the =
+const ar = [1,2,...[3,4]];
+
+// Rest: because on the left side of the =
+const[a,b,...others] = [2,35,8,6,7]
+console.log(a,b,others);
+
+
+const [pizza, ,breakfest,...other] = [...resturant2.mainMenu,...resturant2.startermenu];
+console.log(pizza,breakfest,other); // the rest operator always collect all the rest vareabiles after the last variable and it does not incloude any scep elements for that resion it have to be in the last in the destucturing assement 
+
+// ⁡⁢⁣⁢object⁡
+
+const{friday,...weekdays}= resturant2.openhour;
+console.log(weekdays);
+
+// 2) functions
+const add = function(...numbers){
+    let sum = 0;
+    for(let i = 0; i< numbers.length; i++){
+        sum += numbers[i]
+    }
+    console.log(sum);
+}
+add(3,5);
+add(7,4,9,2);
+add(3,6,1,5,8,9,7);
+const x = [22,45,2];
+add(...x);
+
+resturant2.orderpizza('mashroom','meat','cheese','zeytin');
+resturant2.orderpizza('mashroom')
