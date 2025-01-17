@@ -416,7 +416,7 @@ console.log(letter);
 // console.log(copy.name , resturant2.name); 
 
 // Rest operator
-// Rest operator is opisite of spread spread operator unpacks array but Rest operator packs elements into the array
+// Rest operator is opisite of spread spread  unpacks array but Rest operator packs elements into the array
 
 // 1)Destructuring
 // Spread: because on the Right side of the =
@@ -450,4 +450,49 @@ const x = [22,45,2];
 add(...x);
 
 resturant2.orderpizza('mashroom','meat','cheese','zeytin');
-resturant2.orderpizza('mashroom')
+resturant2.orderpizza('mashroom');
+
+// ⁡⁣⁢⁣About logical operatores⁡
+// 1)⁡⁢⁢⁢They can use any data type⁡ 2) ⁡⁢⁢⁢They can return any data type⁡ 3) ⁡⁢⁢⁢short-circuting⁡
+
+// if the first value is trothy it will log but if it is falsy it will log the athor one but if the athor one is also falsy it will log it And that is called ⁡⁢⁢⁢short-circuting⁡
+console.log('-----OR-----');
+console.log(3 || 'Ahmed');
+console.log(0 || 1);
+console.log(false||true);
+console.log('df'||'');
+console.log(undefined||null);
+
+console.log(undefined || 0 || '' || null || 'hello'||23);
+
+resturant2.numgests = 23; //if we change it like this it will also be changed from 👇
+const guests1 = resturant2.numgests ? resturant2.numgests:10;
+console.log(guests1);
+console.log(resturant2);
+// but with the || it kan be more simple
+const guests2 = resturant2.numgests || 10; // so now numgests is undefiend so it will choose the troothy value
+
+console.log(guests2);
+
+console.log('-----AND-----');
+// The ⁡⁢⁢⁢&&⁡ operator is opsite the ⁡⁢⁢⁢||⁡ operator it chosses the falsy value
+
+console.log(0 && 'ahmad');
+console.log('hello' && '');
+console.log(2 && 23);
+console.log(null && 23);
+console.log(4 && 'd' && undefined && 23);
+
+// Practical practice
+if(resturant2.orderpizza){
+    resturant2.orderpizza('vineger','mashroom')
+}//insted this with && operator we can make it more simple
+resturant2.orderpizza && resturant2.orderpizza('g','g');
+
+resturant2.numgests = 0;
+
+const guests = resturant2.numgests || 10; // = 10
+
+// Nulish:it is only ⁡⁢⁢⁢short-circuting the null & undefiend Not falsy like (0 or '')
+const correct = resturant2.numgests ?? 10; // = 0
+console.log(correct);
