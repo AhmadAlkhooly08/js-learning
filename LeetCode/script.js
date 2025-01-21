@@ -298,36 +298,38 @@ console.log('deep clone:',johnClone);
 // console.log(A,B,C); // now c will be undefiend but if we make A,B,C = 1 c will be 1 and if we remove B from the array it will be 1 also 
 
 // Destructuring objects
+const weekday = ['mon','tue','wed','thu','friday','sat','sun'];
+const openhour ={
+    [weekday[1]]:{
+        open: 9,
+        close: 12,
+    },
+    [weekday[2]]:{
+        open:10,
+        close:11,
+    },
+    [weekday[4]]:{
+        open: 2,
+        close: 1,
+    }
+};
 
 const resturant2 ={
     name: 'classico italyano',
     categories:['italyen','organic','margaretta','with meat'],
     startermenu:['bread','tea','Ayran','egg'],
     mainMenu:['pizza','pasta','breakfest'],
-    openhour:{
-        thu:{
-            open: 9,
-            close: 12,
-        },
-        wed:{
-            open:10,
-            close:11,
-        },
-        friday:{
-            open: 2,
-            close: 1,
-        }
-    },
-    order: function(starterindex,mainindex){
+    openhour,
+    order (starterindex,mainindex){
         return[this.startermenu[starterindex],this.mainMenu[mainindex]]
     },
-    orderdelivery:function({starterindex=2,mainindex=2,time=7,adress}){
+    orderdelivery ({starterindex=2,mainindex=2,time=7,adress}){
         console.log(`order recived: ${this.startermenu[starterindex]} & ${this.mainMenu[mainindex]} at ${time}'oclock to adress:${adress}`);
     },
-    pasta:function(ing1,ing2,ing3){
+    pasta (ing1,ing2,ing3){
         console.log(`Here is your deliciose 😋 pasta with ${ing1} , ${ing2} and ${ing3}`);
     },
-    orderpizza: function(mainIng,...others){
+    orderpizza (mainIng,...others){
         console.log(mainIng);
         console.log(...others);
     }
@@ -623,3 +625,14 @@ for(const i of collect) console.log(i);
 
 for(const [i,el] of collect.entries()) console.log(`${i +1}: ${el}`);
 console.log([...collect.entries()]);
+
+// Edabit code challenge 
+
+function timeForMilkAndCookies(date) {
+	if(date === 11,24 ){
+		console.log(true);
+	}else{
+		console.log(false);
+	}
+}
+timeForMilkAndCookies(new Date(2154, 11, 11));
