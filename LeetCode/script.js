@@ -300,7 +300,7 @@ console.log('deep clone:',johnClone);
 // Destructuring objects
 const weekday = ['mon','tue','wed','thu','friday','sat','sun'];
 const openhour ={
-    [weekday[1]]:{
+    [weekday[1 ]]:{
         open: 9,
         close: 12,
     },
@@ -636,3 +636,12 @@ function timeForMilkAndCookies(date) {
 	}
 }
 timeForMilkAndCookies(new Date(2154, 11, 11));
+
+if(resturant2.openhour && resturant2.openhour.mon) console.log(resturant2.openhour.mon.open);
+
+// console.log(resturant2.openhour.mon.open); 
+
+// Using optional chaining
+
+console.log(resturant2.openhour.friday?.open); 
+console.log(resturant2.openhour?.mon?.open); 
