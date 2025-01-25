@@ -298,19 +298,23 @@ console.log('deep clone:',johnClone);
 // console.log(A,B,C); // now c will be undefiend but if we make A,B,C = 1 c will be 1 and if we remove B from the array it will be 1 also 
 
 // Destructuring objects
-const weekday = ['mon','tue','wed','thu','friday','sat','sun'];
+const weekda = ['mon','tue','wed','thu','friday','sat','sun'];
 const openhour ={
-    [weekday[1 ]]:{
+    [weekda[0 ]]:{
         open: 9,
         close: 12,
     },
-    [weekday[2]]:{
+    [weekda[2]]:{
         open:10,
         close:11,
     },
-    [weekday[4]]:{
+    [weekda[4]]:{
         open: 2,
         close: 1,
+    },
+    sun:{
+        open:0,
+        close:2
     }
 };
 
@@ -645,3 +649,22 @@ if(resturant2.openhour && resturant2.openhour.mon) console.log(resturant2.openho
 
 console.log(resturant2.openhour.friday?.open); 
 console.log(resturant2.openhour?.mon?.open); 
+
+const weekday = ['mon','tue','wed','thu','friday','sat','sun'];
+
+for(const day of weekday){
+    const open = resturant2.openhour[day]?.open ?? ' this day is close';
+    console.log(`on ${day} we open at: ${open}`)
+}
+
+// Methods
+console.log(resturant2.order?.(3,1) ?? 'This method does not excist');
+console.log(resturant2.orderda?.(3,1) ?? 'This method does not excist');
+
+// Arrays
+const users = [{name:'Ahmad',gmail:'Ahmad@gmail.com',age:17}]
+console.log(users[0]?.name ?? 'user is empty');
+
+// Without the optional chainig we must a had to do it with if else statment
+
+if(users[0].gmail) console.log(users[0].gmail);else console.log('user is empty');
