@@ -668,3 +668,27 @@ console.log(users[0]?.name ?? 'user is empty');
 // Without the optional chainig we must a had to do it with if else statment
 
 if(users[0].gmail) console.log(users[0].gmail);else console.log('user is empty');
+
+// looping over objects
+ //properety Names
+const propet = Object.keys(openhour);
+console.log(propet);
+let openstr = `We open ${propet.length} days :`;
+for(const day of propet){
+    // openstr += `${day},`;
+}
+// console.log(openstr);
+
+// property values
+
+const propVal = Object.values(openhour);
+console.log(propVal);
+
+// Entire object
+const entrie = Object.entries(openhour);
+console.log(entrie);
+console.log(key);
+for(const i of entrie){
+    const key = i[0];
+    console.log(`At ${key} we open at ${open} and close at ${close}`);
+}
