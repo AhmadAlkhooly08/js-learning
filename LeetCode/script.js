@@ -701,7 +701,7 @@ Let's continue with our football betting app!
 
 ✅1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
 ✅2. Use a loop to calculate the average odd and log it to the console.
-3. Print the 3 odds to the console, but in a nice formatted way, exaclty like this:
+✅3. Print the 3 odds to the console, but in a nice formatted way, exaclty like this:
       Odd of victory Bayern Munich: 1.33
       Odd of draw: 3.25
       Odd of victory Borrussia Dortmund: 6.5
@@ -717,6 +717,13 @@ BONUS: Create an object called 'scorers' which contains the names of the players
 GOOD LUCK 😀
 */
 
+const scorers = {}
+const scored = ['Gnarby','Hummels','Lewandowski']
+for(const [i,players] of scored.entries()){
+    // console.log(players);
+    scorers[players] = i +1;
+};
+console.log(scorers);
 const game2 = {
     team1: 'Bayern Munich',
     team2: 'Borrussia Dortmund',
@@ -779,6 +786,11 @@ average = average / tow.length;
 console.log(average);
 
 // 3
-const three = game2.odds.entries();
+const vari = Object.entries(game2.odds);
+const three = Object.values(game2.odds);
 // const entire =three.entries()
-console.log(three);
+console.log(vari);
+for(const [key,odd] of vari){
+    let a = key === 'x' ? 'draw' : `victory ${game2[key]}`;
+    console.log(`Odd of ${a}: ${odd}`);
+}
