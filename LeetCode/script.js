@@ -707,7 +707,7 @@ Let's continue with our football betting app!
       Odd of victory Borrussia Dortmund: 6.5
 Get the team names directly from the game object, don't hardcode them (except for "draw"). HINT: Note how the odds and the game objects have the same property names 😉
 
-BONUS: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
+✅BONUS: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
       {
         Gnarby: 1,
         Hummels: 1,
@@ -717,13 +717,6 @@ BONUS: Create an object called 'scorers' which contains the names of the players
 GOOD LUCK 😀
 */
 
-const scorers = {}
-const scored = ['Gnarby','Hummels','Lewandowski']
-for(const [i,players] of scored.entries()){
-    // console.log(players);
-    scorers[players] = i +1;
-};
-console.log(scorers);
 const game2 = {
     team1: 'Bayern Munich',
     team2: 'Borrussia Dortmund',
@@ -773,24 +766,26 @@ for(const [i,goal] of game2.scored.entries()){
 
 // 2
 const tow = Object.values(game2.odds);
-console.log(tow);
-
 let average = 0;
 let last;
 for(const j of tow){
     average += j 
     
 }
-console.log(average);
-average = average / tow.length;
+  average /= tow.length;
 console.log(average);
 
 // 3
 const vari = Object.entries(game2.odds);
-const three = Object.values(game2.odds);
-// const entire =three.entries()
-console.log(vari);
 for(const [key,odd] of vari){
     let a = key === 'x' ? 'draw' : `victory ${game2[key]}`;
     console.log(`Odd of ${a}: ${odd}`);
 }
+
+// Bonus
+const scorers = {}
+for(const players of game2.scored){
+    // console.log(i);
+    scorers[players] ? scorers[players]++ : (scorers[players] =1);
+};
+console.log(scorers);
