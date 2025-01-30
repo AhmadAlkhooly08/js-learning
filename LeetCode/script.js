@@ -789,3 +789,23 @@ for(const players of game2.scored){
     scorers[players] ? scorers[players]++ : (scorers[players] =1);
 };
 console.log(scorers);
+
+
+// Sets
+    // Sets are uniq if we put the same element 2 times it will pase it as 1 and it does not has index and we can not recieve elements from the set 
+const orderSet = new Set(['pizza','burger','burger','egg'])
+console.log(new Set('Ahmad'));
+console.log(orderSet.has('pizza'),orderSet.has('garlic bread'));
+console.log(orderSet.add('garlic bread'));
+console.log(orderSet.delete('egg'));
+//  ⁡⁣⁢⁣orderSet.clear()⁡   👈 this clears All the sets     
+console.log(orderSet,orderSet.size);
+
+// we can loop also
+for(const e of orderSet) console.log(e);
+
+// The main use of the sets to remove the duplikate values of the arrays
+    // Example
+ const staff = ['mannager','waiter','cheff','waiter','cheff','waiter'];
+ const staffSet = [...new Set(staff)];
+ console.log(staffSet);   
