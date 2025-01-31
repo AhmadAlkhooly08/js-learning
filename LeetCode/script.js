@@ -809,3 +809,8 @@ for(const e of orderSet) console.log(e);
  const staff = ['mannager','waiter','cheff','waiter','cheff','waiter'];
  const staffSet = [...new Set(staff)];
  console.log(staffSet);   
+
+//  OR
+
+console.log(new Set(['mannager','waiter','cheff','waiter','cheff','waiter']).size);
+console.log(new Set('AhmadYaserAlkhooly').size);
