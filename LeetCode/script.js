@@ -824,3 +824,66 @@ function printArray(number) {
       console.log(newArray);
 }
 console.log(printArray(7));
+
+const arrowFunc = (num) => {
+    let bool = (typeof num === 'number' || typeof num === 'boolean') ? num : `'${num}'`;
+    console.log(bool);
+
+}
+
+arrowFunc(3)
+arrowFunc("4")
+arrowFunc('hello')
+arrowFunc(true)
+
+
+function countUnique(s1, s2) {
+	console.log(new Set(s1 + s2).size)
+}
+countUnique('apple','play');
+
+// New operations to make Set's useful
+
+const italianFoods = new Set([
+    'pasta',
+    'gnocchi',
+    'tomatoes',
+    'olive oil',
+    'garlic',
+    'basil',
+]);
+
+const mexicanFoods = new Set([
+'tortillas',
+'beans',
+'rice',
+'tomatoes',
+'avocado',
+'garlic',
+]);
+
+// If we want to know the same elements in the 2 sets above we use ⁡⁢⁣⁢intersection⁡ method
+const common = italianFoods.intersection(mexicanFoods)
+console.log([...common]);
+
+// ⁡⁢⁣⁢Union⁡ method combaines 2 sets without repeting the same elements
+
+const italianmexican = italianFoods.union(mexicanFoods);
+console.log(italianmexican);
+
+// ⁡⁢⁣⁢Difference⁡ method takes the unige methods that is only in the taken set from one set 
+
+const uniqitalian = italianFoods.difference(mexicanFoods);
+const uniqmexican = mexicanFoods.difference(italianFoods);
+
+console.log(uniqitalian);
+console.log(uniqmexican);
+
+// ⁡⁢⁣⁢symetricdifference⁡ method it gives all the uniq elements from 2 set's
+
+const italianMexican = italianFoods.symmetricDifference(mexicanFoods);
+console.log(italianMexican);
+
+// ⁡⁢⁣⁢isDisjointFrom⁡ method checks if the 2 sets are completle diffrent or not
+
+console.log(italianFoods.isDisjointFrom(mexicanFoods));
