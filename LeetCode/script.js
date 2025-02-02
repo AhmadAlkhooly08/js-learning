@@ -814,3 +814,13 @@ for(const e of orderSet) console.log(e);
 
 console.log(new Set(['mannager','waiter','cheff','waiter','cheff','waiter']).size);
 console.log(new Set('AhmadYaserAlkhooly').size);
+
+// edabit code challenge
+function printArray(number) {
+    let newArray = [];
+      for(let i =1; i <= number; i++){
+           newArray.push(i);
+      }
+      console.log(newArray);
+}
+console.log(printArray(7));
