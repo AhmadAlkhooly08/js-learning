@@ -887,3 +887,5 @@ console.log(italianMexican);
 // ⁡⁢⁣⁢isDisjointFrom⁡ method checks if the 2 sets are completle diffrent or not
 
 console.log(italianFoods.isDisjointFrom(mexicanFoods));
+
+// MAPS
