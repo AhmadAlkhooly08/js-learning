@@ -888,4 +888,26 @@ console.log(italianMexican);
 
 console.log(italianFoods.isDisjointFrom(mexicanFoods));
 
+// Edabit code challenge
+function unrepeated(str) {
+    const ser = new Set(str);
+	console.log(...ser);
+}
+unrepeated("hello");
+
 // MAPS
+    // With maps the key varibal kan number,string or even athor maps
+
+let mpa = new Map()    
+mpa.set('Name','Egyption')
+mpa.set(1,'Ahmad')
+mpa.set('categories',resturant2.categories)
+    .set('open',11)
+    .set('close',23)
+    .set(true,'We are open')
+console.log(mpa.set(2,'Alkhooly'));
+console.log(mpa.get('Name'));
+console.log(mpa.get(true));
+
+let time = 8;
+console.log(mpa.get(time > mpa.get('open') && time < mpa.get('close') ));
