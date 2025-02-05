@@ -895,6 +895,27 @@ function unrepeated(str) {
 }
 unrepeated("hello");
 
+function fiftyThirtyTwenty(ati) {
+	const involve = {
+        Needs: ati * 0.50,
+        Wants: ati * 0.30,
+        Savings: ati * 0.20
+    }
+    console.log(involve);
+}
+fiftyThirtyTwenty(10000)
+
+function uploadCount(dates, month) {
+	let mon = 0;
+	for(let i = 0; i < dates.length; i++){
+		if(dates[i].startsWith(month)){
+            mon++;
+        }
+	}
+        console.log(mon);
+}
+uploadCount(["Sept 22", "Sept 21", "Oct 15"], "Sept");
+
 // MAPS
     // With maps the key varibal kan number,string or even athor maps
 
@@ -910,4 +931,53 @@ console.log(mpa.get('Name'));
 console.log(mpa.get(true));
 
 let time = 8;
-console.log(mpa.get(time > mpa.get('open') && time < mpa.get('close') ));
+console.log(mpa.get(time > mpa.get('open') && time < mpa.get('close')));
+console.log(mpa.has(2));
+mpa.delete(2);
+// mpa.clear();
+
+// We can make an array key in map but when we try to call the array it well not give us the value becaus it is not the same array in the heap but if we put the array inside a variable it well work
+
+const aar = [1,2];
+mpa.set(aar,'Test');
+mpa.set(document.querySelector('h1'),'Heading ')
+console.log(mpa.get(aar));
+console.log(mpa);
+console.log(mpa.size);
+
+// Maps iteration
+
+const question = new Map([
+    ['Question','What is the best coding lenguage?'],
+    [1,'c'],
+    [2,'java'],
+    [3,'javaScript'],
+    ['correct' , 3],
+    [true,'correct 🎉'],
+    [false,'Wrong try again'],
+])
+console.log(question);
+
+// converting Objects to maps
+
+console.log(Object.entries(openhour));
+const hoursMap = new Map(Object.entries(openhour))
+console.log(hoursMap);
+
+// Quiz
+console.log(question.get('Question'));
+for(const [key,val] of question){
+    if(typeof key === 'number') console.log(`Answer ${key}: ${val}`);
+}
+
+// ⁡⁢⁣⁢smart logic⁡
+// const answer = Number(prompt('Whats your answer'));
+// console.log(answer);
+// console.log(question.get(answer === question.get('correct')));
+
+// convert map to array
+
+console.log([...question]);
+// console.log([...question.entries()]);
+console.log([...question.keys()]);
+console.log([...question.values()]);
