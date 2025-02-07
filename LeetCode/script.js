@@ -1023,6 +1023,60 @@ console.log(`An event happened, on average, every ${90 / gameEvents.size} minute
 
 // 4
 for(const [key,valu] of gameEvents){
-    const half = key < 45 ? `[FIRST HALF] ${key}: ${valu}` : `[SECOND HALF] ${key}: ${valu}`;
-    console.log(half);
+    const half = key < 45 ? 'FIRST '  : 'SECOND' ;
+    console.log(`[${half} HALF] ${key}: ${valu}`);
 }
+
+// Strings
+
+const airplane = 'Tap Air Egypt';
+const plane = 'A3123';
+// So we can use strings like an array selecting index or now the length 
+console.log(plane[0]);
+console.log(plane[1]);
+console.log('wedfv'[1]);
+console.log(airplane.length);
+console.log('b732'.length);
+
+// and rtrings also has methods
+
+console.log(airplane.indexOf('p'));
+console.log(airplane.lastIndexOf('p'));
+console.log(airplane.indexOf('Egypt')); //Not: if we write something wrong it will show -1
+
+// with slice method we can slice indexes from strings and put it to knew one So it starts with the index that you enterd and stop at the end index minus one that you enterd and the length of the sliced string its always the end - beginning
+
+console.log(airplane.slice(4));
+console.log(airplane.slice(4,7));
+
+console.log(airplane.slice(0,airplane.indexOf(' ')));
+console.log(airplane.slice(airplane.lastIndexOf(' ') + 1));
+// And we can use negative to slice from the end
+console.log(airplane.slice(-3));
+console.log(airplane.slice(3,-2));
+
+const chekMiddle = function(middle){
+    const s = middle.slice(-1); 
+    if(s === 'B' || s === 'E'){
+        console.log(`You got the middle seat: ${middle}`);
+    }else{
+        console.log(`your seat is: ${middle}`);
+    }
+}
+chekMiddle('11E')
+chekMiddle('23D')
+chekMiddle('17B');
+
+// When we use method on strings javascript converts it to object and when it finished from the methods it reutrns to string
+console.log(new String('Ahmad'));
+console.log(typeof new String('Ahmad'));
+
+// Edabit code challenge 
+function colorInvert(rgb) {
+    let sub = [];
+    for(let i of rgb){
+        sub.push(255 - i);
+    }
+	console.log(sub)
+}
+colorInvert([240, 190, 187])
