@@ -1080,3 +1080,23 @@ function colorInvert(rgb) {
 	console.log(sub)
 }
 colorInvert([240, 190, 187])
+
+// Contoniu with strings 
+
+console.log(airplane.toLowerCase());
+console.log('ahmad'.toUpperCase());
+
+const correctPassenger = function(passenger){
+    let correct = passenger.slice(1).toLowerCase();
+    console.log(passenger[0].toUpperCase() + correct);
+}
+correctPassenger('uDeMy')
+
+// comparing email example
+
+const correctEmail = function(original,loginEmail){
+    let resign = loginEmail.toLowerCase().trim() //.trim removes all the spaces from the string
+    console.log(resign);
+    console.log(original === resign);
+}
+correctEmail('salk321@gmail.com','   SalK321@GmaIL.CoM  ')
