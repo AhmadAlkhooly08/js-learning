@@ -1100,3 +1100,71 @@ const correctEmail = function(original,loginEmail){
     console.log(original === resign);
 }
 correctEmail('salk321@gmail.com','   SalK321@GmaIL.CoM  ')
+
+// replacing 
+
+let priceGB = '289,79JD';
+let priceUS = priceGB.replace('JD','$').replace(',','.');
+console.log(priceGB , priceUS);
+
+const call = 'All passengers to To boarding door 23. boarding door 23!';
+console.log(call.replace('door','gate')); // replace method will only replace the first selected element
+console.log(call.replaceAll('door','gate')); // replaceAll method will work
+
+// Boolean
+
+const aPlane = 'Air board A320 ead'
+console.log(aPlane.includes('20'));
+console.log(aPlane.includes('bead'));
+console.log(aPlane.startsWith('Air'));
+console.log(aPlane.startsWith('Air b'));
+
+if(aPlane.startsWith('Air board') && aPlane.endsWith('ead')){
+    console.log('Part of new airplane family');
+}
+
+// Examole
+const baggege = function(bag){
+    const res = bag.toLowerCase();
+    if(res.includes('gun') || res.includes('knife')){
+        console.log('🫵 You can not enter with unleagle things');
+    }else{
+        console.log('you can enter the plane 😊');
+    }
+}
+baggege('I have Food,KniFe,phone')
+baggege('I have Laptop,boxer,phone')
+baggege('I have snackes,boxer,gUn')
+
+// Edabit
+function rps(p1, p2) {
+    let w = {
+        Rock: "Scissors",
+        Scissors: "Paper",
+        Paper: "Rock"
+    }
+    if(p1 === p2) console.log('draw!!');
+    console.log(`The winner is ${w[p1] === p2 ? 'p1' : 'p2'}`);
+    // let winner = 'draw';
+    // for(let [win,lost] of chec){
+    //     if(p1 === win && p2 === lost){
+    //         winner ='p1';
+    //         console.log(`the winner is ${winner}`);
+    //         break;
+    //     }else if(p1 === lost && p2 === win){
+    //         winner = 'p2';
+    //         console.log(`the winner is ${winner}`);
+    //         break;
+    //     }else if(p1 === p2){
+    //         winner = 'Draw'
+    //         console.log(`it is ${winner}`);
+    //     }
+    // }
+    // const key = Object.keys(chec);
+    // const va = Object.values(chec)
+}
+
+rps("Rock", "Paper");
+rps("Scissors", "Rock");
+rps("Scissors", "Paper");
+rps("Paper", "Rock")
