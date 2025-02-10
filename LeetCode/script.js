@@ -1167,4 +1167,52 @@ function rps(p1, p2) {
 rps("Rock", "Paper");
 rps("Scissors", "Rock");
 rps("Scissors", "Paper");
-rps("Paper", "Rock")
+rps("Paper", "Rock");
+
+// continuing with strings 
+    // Join & Split
+
+console.log('This + is + good'.split('+'));    
+console.log('Ahmad Alkhooly'.split(' '));
+
+const [firstName,LastName] = 'Ahmad Alkhooly'.split(' ');
+const join = ['MR.', firstName , LastName.toUpperCase()].join(' ');
+console.log(join);
+
+const capitilaizName = function(name){
+    let ar = name.split(' ');
+    let result = [];
+    for(const n of ar){
+        // result.push(n[0].toUpperCase() + n.slice(1)); //First way
+        result.push(n.replace(n[0],n[0].toUpperCase())) //second way
+    }
+    console.log(result.join(' '));
+}
+capitilaizName('ahmad yaser mostafa alkhooly');
+
+// Padding
+const bf = 'Go to there'
+console.log(bf.padStart(15,'-').padEnd(19,'-'));//pad add elements to complete the length that you enterd
+console.log('Ahmad'.padStart(11,'-').padEnd(19,'-'));
+
+// Example
+
+const creditCard = function(number){
+    const str = number + '';
+    const combain= str.slice(-4)
+    console.log(combain.padStart(str.length,'*'));
+}
+creditCard(23764924)
+creditCard(2376496632110)
+creditCard('5776190832738')
+
+// Repeat
+const weth = 'dont go outside its very coold  ';
+console.log(weth.repeat(3));
+
+const plan = function(n){
+    console.log(`there are ${n} planes inline ${'🛩️ '.repeat(n)}`);
+}
+plan(3)
+plan(4)
+plan(5)
