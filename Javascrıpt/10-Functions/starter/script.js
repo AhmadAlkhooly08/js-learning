@@ -13,11 +13,12 @@ const creatFlight = function(flightNum,numPassengers =3,price=199.4 * numPasseng
         flightNum,
         numPassengers,
         price,
-    };ggg
+    };
     console.log(booking);
-    
+
     bookings.push(booking);
 }
+console.log(bookings);
 creatFlight('Lh345')
 creatFlight('Lh345',2)
 creatFlight('Lh345',6)
