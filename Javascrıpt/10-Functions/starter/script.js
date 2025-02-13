@@ -7,7 +7,7 @@ const creatFlight = function(flightNum,numPassengers =3,price=199.4 * numPasseng
     // giving defult value to undefiend varibals
         // Es5 old way
     // numPassengers = numPassengers || 3;
-    // price = price || 199;
+    // price = price || 199; that 
 
     const booking = {
         flightNum,
@@ -18,7 +18,7 @@ const creatFlight = function(flightNum,numPassengers =3,price=199.4 * numPasseng
 
     bookings.push(booking);
 }
-console.log(bookings);
+console.log(1,3,2,4,);
 creatFlight('Lh345')
 creatFlight('Lh345',2)
 creatFlight('Lh345',6)
