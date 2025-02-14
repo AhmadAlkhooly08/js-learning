@@ -18,9 +18,7 @@ const creatFlight = function(flightNum,numPassengers =3,price=199.4 * numPasseng
 
     bookings.push(booking);
 }
-console.log(1,3,2,4,);
 creatFlight('Lh345')
 creatFlight('Lh345',2)
 creatFlight('Lh345',6)
-
 // ⁡⁢⁣⁢creatFlight('Lh345',6)⁡ //we can not pass an argument but unsted we can set it to undefenfd
