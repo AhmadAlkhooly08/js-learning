@@ -41,7 +41,7 @@ const checkIn = function(flightNum,person){
 // checkIn(flight,passenger)
 
 // console.log(flight);
-// console.log(passenger);⁡ // so we see with the object that when we resigned it with the function value it also changed from the original one because they are pointing to the same object in the heap heap 
+// console.log(passenger);⁡ // so we see with the object that when we resigned it with the function value it also changed from the original one because they are pointing to the same object in the heap heap nvmbfh
 
 const newPassport = function(num){
     return num.passaport = Math.trunc(Math.random() * 123453348654);
