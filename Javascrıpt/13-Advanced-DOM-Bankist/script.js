@@ -158,7 +158,7 @@ const alertH1 = function(e){
   h1.removeEventListener('mouseenter',alertH1);//this removes the Event if it runs 1 time
 }
 
-h1.addEventListener('mouseenter',alertH1)
+h1.addEventListener('mouseenter',alertH1);
 
 // thi is another way that also works
 // h1.onmouseenter = function(e){
